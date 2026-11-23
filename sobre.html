@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <title>Sobre mim | Patrick Gonçalves Pinheiro</title>
+    <meta name="author" content="Patrick Gonçalves Pinheiro">
+    <meta name="description"
+        content="Conheça Patrick Gonçalves Pinheiro, estudante de Análise e Desenvolvimento de Sistemas, e as tecnologias que ele aprendeu (Figma, HTML, CSS, JavaScript, Node.js, React, Bootstrap, Java, Git, GitHub e API) e seus principais projetos.">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231d44b8'/%3E%3Ctext x='50' y='68' font-size='56' font-family='sans-serif' font-weight='bold' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
+    <script>
+        /* Aplica o tema salvo antes da pintura da tela (evita piscar). Padrão: escuro. */
+        try {
+            var t = localStorage.getItem('tema');
+            if (t === 'claro' || t === 'escuro') {
+                document.documentElement.dataset.tema = t;
+            } else if (matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.dataset.tema = 'claro';
+            }
+        } catch (e) { }
+    </script>
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <script src="js/script.js?v=2" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <main class="container" id="conteudo">
+        <button class="tema-btn" id="botao-tema" type="button" aria-pressed="false">Tema claro</button>
+
+        <header class="perfil">
+            <!-- width/height reservam o espaço (evita CLS); fetchpriority acelera o LCP -->
+            <img class="perfil__foto" src="img/eu.jpg" width="120" height="120" fetchpriority="high"
+                decoding="async" alt="Foto de Patrick Gonçalves Pinheiro">
+            <div class="perfil__texto">
+                <h1>Patrick Gonçalves Pinheiro</h1>
+                <p>Desenvolvedor Front-End</p>
+            </div>
+        </header>
+
+        <!--
+            TEXTO EDITÁVEL: ajuste as frases abaixo com as suas palavras.
+            Escrevi só com informações já combinadas (curso, objetivo e cidade).
+        -->
+        <section class="texto secao" aria-labelledby="titulo-sobre">
+            <h2 id="titulo-sobre">Sobre mim</h2>
+            <p>Sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade Flamingo e moro em São Paulo.
+                Aprendi programação passo a passo, começando pelo design de interfaces e avançando até
+                linguagens de programação mais robustas.</p>
+            <p>Estou em busca da minha primeira oportunidade profissional na área de tecnologia, como
+                Desenvolvedor Web Júnior ou Estagiário. Esta página é o meu cartão de visitas digital e reúne o
+                que construí e aprendi até aqui.</p>
+        </section>
+
+        <section class="texto secao" aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias">Tecnologias que já usei</h2>
+            <p>Esta é a ordem em que aprendi cada uma ao longo do curso.</p>
+
+            <ol class="trajetoria">
+                <li>
+                    <h3>Design de interfaces</h3>
+                    <p>Comecei pensando a tela antes de programar: protótipos, organização visual e fluxo de uso.</p>
+                    <ul class="chips" aria-label="Tecnologias desta etapa">
+                        <li>Figma</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Fundamentos da web e lógica de programação</h3>
+                    <p>Estrutura e semântica com HTML, estilo e layout responsivo com CSS, e interatividade e
+                        lógica com JavaScript.</p>
+                    <ul class="chips" aria-label="Tecnologias desta etapa">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>JavaScript fora do navegador</h3>
+                    <p>Uso do JavaScript no servidor, base para entender como o front-end conversa com o back-end.</p>
+                    <ul class="chips" aria-label="Tecnologias desta etapa">
+                        <li>Node.js</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Interfaces modernas</h3>
+                    <p>Criação de interfaces com componentes reutilizáveis em React, junto com o Bootstrap
+                        para acelerar o layout.</p>
+                    <ul class="chips" aria-label="Tecnologias desta etapa">
+                        <li>React</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Programação orientada a objetos</h3>
+                    <p>Estudo de uma linguagem tipada e estruturada, reforçando lógica e organização de código.</p>
+                    <ul class="chips" aria-label="Tecnologias desta etapa">
+                        <li>Java</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3 class="subtitulo">Ferramentas e conceitos</h3>
+            <p>Além das linguagens, estas ferramentas fazem parte do meu dia a dia de desenvolvimento.</p>
+            <ul class="ferramentas">
+                <li>
+                    <strong>Git</strong>
+                    <span>Controle de versão: registra o histórico do código e permite voltar atrás ou testar mudanças com segurança.</span>
+                </li>
+                <li>
+                    <strong>GitHub</strong>
+                    <span>Hospedagem dos repositórios, vitrine do meu código e publicação de sites com o GitHub Pages.</span>
+                </li>
+                <li>
+                    <strong>API</strong>
+                    <span>Integração entre sistemas: como o front-end pede e recebe dados de um serviço, por exemplo com o <code>fetch</code> do JavaScript.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!--
+            PRINCIPAIS PROJETOS: descrições escritas a partir do que cada página mostra.
+            Confira se concordam com o que você fez (principalmente as tecnologias do Word Termo Master).
+        -->
+        <section class="texto secao" id="projetos" aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos">Principais projetos</h2>
+            <p>Projetos publicados online, que você pode abrir e testar agora.</p>
+
+            <ul class="projetos">
+                <li class="projeto">
+                    <h3>TaskFlow</h3>
+                    <p>Landing page de um aplicativo fictício de gerenciamento de tarefas, com menu de navegação,
+                        destaque principal e cards de recursos. Projeto de revisão de Bootstrap.</p>
+                    <ul class="chips" aria-label="Tecnologias do projeto TaskFlow">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                    <a class="projeto__link" href="https://patrickgp11.github.io/Projeto-01-Revisao-de-Bootstrap/"
+                        target="_blank" rel="noopener noreferrer">Ver projeto TaskFlow<span class="sr-only"> (abre em
+                            nova aba)</span></a>
+                </li>
+                <li class="projeto">
+                    <h3>TechStore: Checkout</h3>
+                    <p>Tela de finalização de compra de um e-commerce fictício: dados de cobrança com mensagens de
+                        validação, informações de pagamento, cupom de desconto e resumo do pedido.</p>
+                    <ul class="chips" aria-label="Tecnologias do projeto TechStore">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                    <a class="projeto__link" href="https://patrickgp11.github.io/Projeto-05-Revisao-de-Bootstrap/"
+                        target="_blank" rel="noopener noreferrer">Ver projeto TechStore<span class="sr-only"> (abre em
+                            nova aba)</span></a>
+                </li>
+                <li class="projeto">
+                    <h3>Word Termo Master</h3>
+                    <p>Jogo de palavras inspirado no Termo, com os modos Solo, Dueto e Quarteto, estatísticas de
+                        partidas (vitórias, sequência e recorde) e opções de acessibilidade, como alto contraste e
+                        cores para daltonismo.</p>
+                    <ul class="chips" aria-label="Tecnologias do projeto Word Termo Master">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <a class="projeto__link" href="https://word-termo-master.vercel.app/" target="_blank"
+                        rel="noopener noreferrer">Ver projeto Word Termo Master<span class="sr-only"> (abre em nova
+                            aba)</span></a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="secao secao--acao" aria-label="Ações">
+            <a class="btn" href="docs/Curriculo_Patrick_Goncalves_Pinheiro (1).pdf" download>Baixar currículo (PDF)</a>
+            <a class="btn btn--secundario" href="contato.html">Entrar em contato</a>
+        </section>
+
+        <footer class="rodape">
+            <a href="index.html" class="nav-link">Voltar para links</a>
+            <p>&copy; 2026 | Desenvolvido por Patrick Gonçalves Pinheiro</p>
+        </footer>
+
+    </main>
+</body>
+
+</html>
